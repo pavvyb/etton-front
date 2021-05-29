@@ -1,0 +1,41 @@
+<template>
+  <div class="header">
+    <!-- <h1>{{ logoUrl }}</h1> -->
+    <dropdown-menu />
+    <img src="../assets/images/logo.png" class="logo" alt="">
+    <!-- <span>ff</span> -->
+
+  </div>
+</template>
+
+<script>
+import Menu from './Menu.vue'
+
+export default {
+  name: 'Header',
+  components: {
+    'dropdown-menu': Menu,
+  },
+  props: {
+    logoUrl: String
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+// h3 {
+//   margin: 40px 0 0;
+// }
+// ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
+// li {
+//   display: inline-block;
+//   margin: 0 10px;
+// }
+// a {
+//   color: #42b983;
+// }
+</style>
