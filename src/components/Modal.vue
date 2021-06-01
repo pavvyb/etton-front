@@ -20,9 +20,9 @@
             </div>
             <custom-checkbox inputText="Show" class="section" />
         </div>
-        <div class="modal-footer">
-            <button disabled class="button-modal disabled">OK</button>
-            <button v-on:click="close()" class="button-modal">Cancel</button>
+        <div v-bind:class="{'modal-footer':($mq != 'mobile'), 'modal-footer-mobile':($mq === 'mobile')}">
+            <button disabled v-bind:class="{'button-modal disabled':($mq != 'mobile'), 'button-modal-mobile disabled':($mq === 'mobile')}">OK</button>
+            <button v-on:click="close()" v-bind:class="{'button-modal':($mq != 'mobile'), 'button-modal-mobile disabled':($mq === 'mobile')}">Cancel</button>
         </div>
       </div>
   </div>

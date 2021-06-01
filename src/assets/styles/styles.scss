@@ -195,7 +195,7 @@ html, body {
             input {
 
                 margin-top: 1vh;
-                padding: 5px 5px;
+                padding: 1vh 1vw;
                 font-size: 2vh;
                 border-width: 1px;
                 border-radius: 5px;
@@ -225,6 +225,7 @@ html, body {
             justify-content: space-evenly;
 
             .button-modal {
+                width: 40%;
                 padding: 1vh 1vw;
                 margin: 1vh 1vw;
                 font-size: 2vh;
@@ -343,4 +344,20 @@ html, body {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
     }
+}
+// MOBILE STYLING
+.modal-footer-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button-modal-mobile {
+    margin-bottom: 1vh;
+    width: 80%;
+    padding: 2vh 1vw;
+    border-radius: 5px;
+    font-size: 2vh;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
 }
