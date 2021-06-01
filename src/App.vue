@@ -2,7 +2,7 @@
   <div id="app">
     <custom-header logoUrl="../assets/images/logo.png" />
     <router-view/>
-    <custom-footer developerEmail="dev@dev.com" />
+    <custom-footer developerEmail="pavvyb@icloud.com" />
   </div>
 </template>
 

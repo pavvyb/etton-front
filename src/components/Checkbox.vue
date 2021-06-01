@@ -1,9 +1,8 @@
-<template>
-  <div class="checkbox">
-      <img src="@/assets/images/checkbox-active.svg" v-if="isSelected" @click="isSelected = !isSelected">
-      <img src="@/assets/images/checkbox-default.svg" v-else @click="isSelected = !isSelected">
-      <span>{{ inputText }}</span>
-  </div>
+<template lang="pug">
+  .checkbox
+    img(src='@/assets/images/checkbox-active.svg' v-if='isSelected' @click='isSelected = !isSelected')
+    img(src='@/assets/images/checkbox-default.svg' v-else='' @click='isSelected = !isSelected')
+    span {{ inputText }}
 </template>
 
 <script>

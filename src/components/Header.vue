@@ -1,11 +1,7 @@
-<template>
-  <div class="header">
-    <!-- <h1>{{ logoUrl }}</h1> -->
-    <dropdown-menu />
-    <img src="../assets/images/logo.png" class="logo" alt="">
-    <!-- <span>ff</span> -->
-
-  </div>
+<template lang="pug">
+  header(class="header")
+    dropdown-menu
+    img(src="../assets/images/logo.png" class="logo")
 </template>
 
 <script>

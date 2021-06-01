@@ -1,21 +1,18 @@
-<template>
-    <div class="uploader">
-      <form enctype="multipart/form-data" novalidate v-if="isInitial || isSaving">
-        <label for="file">
-            Image:
-        </label>
-        <input type="file" multiple :name="uploadFieldName" :disabled="isSaving" @change="filesChange($event.target.name, $event.target.files); fileCount = $event.target.files.length" accept="image/*" class="uploader-input">
-      </form>
-        <!--SUCCESS-->
-      <div v-if="isSuccess">
-        <span>Uploaded file successfully.</span>
-      </div>
-        <!--FAILED-->
-      <div v-if="isFailed">
-        <span>Upload failed!</span>
-        <pre>{{ uploadError }}</pre>
-      </div>
-  </div>
+<template lang="pug">
+  .uploader
+    form(enctype='multipart/form-data' novalidate='')
+      label(for='file')
+        | Image:
+      .uploader-button
+        .uploader-button-text(v-if='isSuccess')
+          | Success!
+        .uploader-button-text(v-if='isFailed')
+          | Upload failed
+        .uploader-button-text(v-if='isInitial')
+          | Upload image
+        .uploader-button-text(v-if='isSaving')
+          | Uploading...
+        input.uploader-input(type='file' :name='uploadFieldName' :disabled='isSaving' @change='filesChange($event.target.name, $event.target.files); fileCount = $event.target.files.length' accept='image/*' v-if='isInitial || isSaving')
 </template>
 
 <script>

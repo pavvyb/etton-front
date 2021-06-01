@@ -2,27 +2,27 @@
   <div class="modal-backdrop">
       <div class="modal">
         <div class="modal-header">
-            <span>{{ modalHeader }}</span>
+            <h1>{{ modalHeader }}</h1>
         </div>
         <div class="modal-body">
-            <div>
+            <div class="section">
               <form action="">
                   <label for="name">Name:</label>
                   <input type="text" v-model="nameInput">
               </form>
             </div>
-            <file-uploader />
-            <div>
+            <file-uploader class="section" />
+            <div class="section">
                 <form action="">
                     <label for="desc">Description:</label>
                     <input type="text" v-model="descriptionInput">
                 </form>
             </div>
-            <custom-checkbox inputText="Show" />
+            <custom-checkbox inputText="Show" class="section" />
         </div>
         <div class="modal-footer">
-            <button disabled class="disabled">OK</button>
-            <button v-on:click="close()">Cancel</button>
+            <button disabled class="button-modal disabled">OK</button>
+            <button v-on:click="close()" class="button-modal">Cancel</button>
         </div>
       </div>
   </div>

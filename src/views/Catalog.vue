@@ -1,12 +1,12 @@
 <template>
   <div class="catalog container">
     <div>
-      <button type="button" class="btn" @click="showModal">Add item</button>
+      <button type="button" class="button-main" @click="showModal">Add item</button>
       <custom-modal v-show="isModalVisible" @close="closeModal" modalHeader="Create new item" />
     </div>
     <div class="card-list">
-      <div v-for="card in cardsGenerated" :key="card.cardImage">
-        <card-component :cardContent="{ card }" />
+      <div v-for="card in cardsGenerated" :key="card.cardImage" class="separator">
+        <card-component :cardContent="{ card }" class="flyer" />
       </div>
     </div>
   </div>

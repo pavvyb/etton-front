@@ -1,13 +1,10 @@
-<template>
-  <div class="card">
-      <div class="card-header">
-          {{ cardHeader }}
-      </div>
-      <img v-bind:src="cardImage" alt="" class="card-image">
-      <div class="card-description">
-          {{ cardDescription }}
-      </div>
-  </div>
+<template lang="pug">
+  .card
+    h1.card-header
+      | {{ cardHeader }}
+    img.card-image(v-bind:src='cardImage' alt='')
+    .card-description
+      | {{ cardDescription }}
 </template>
 
 <script>

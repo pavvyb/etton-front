@@ -1,7 +1,6 @@
-<template>
-  <div class="footer">
-    <span>{{ developerEmail }}</span>
-  </div>
+<template lang="pug">
+  footer.footer
+    span {{ developerEmail }}
 </template>
 
 <script>
