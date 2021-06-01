@@ -22,9 +22,6 @@ const STATUS_INITIAL = 0, STATUS_SAVING = 1, STATUS_SUCCESS = 2, STATUS_FAILED =
 
 export default {
   name: 'Uploader',
-  props: {
-    // modalHeader: String
-  },
   data() {
     return {
       uploadedFiles: [],

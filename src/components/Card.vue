@@ -13,11 +13,6 @@ export default {
   props: {
     cardContent: Object
   },
-  data() {
-    return {
-    //   uploadedFiles: [],
-    }
-  },
   computed: {
     cardHeader() {
         return this.cardContent.card.cardName;
@@ -28,16 +23,6 @@ export default {
     cardDescription() {
         return this.cardContent.card.cardDescription;
     }
-  },
-  methods: {
-    // reset() {
-    //   this.currentStatus = STATUS_INITIAL;
-    //   this.uploadedFiles = [];
-    //   this.uploadError = null;
-    // }
-  },
-  mounted() {
-    // this.reset();
   },
 }
 </script>
